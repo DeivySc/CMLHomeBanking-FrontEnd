@@ -1,0 +1,44 @@
+<div class="centered-content-layout relative">
+  <div class="border-top"></div>
+  <div class="container px-4 lg:ml-auto dimension">
+    <img src="assets/images/login.svg" alt="login" class="hidden lg:block absolute-bg">
+    <div class="xl:flex 2xl:flex-col w-full lg:w-7/12 lg:mx-auto items-center">
+      <div class="flex flex-col pt-5  pb-20 lg:pb-1" [formGroup]="form">
+        <img class="mx-auto" src="assets/images/logo-full.svg" alt="logo">
+        <h4 class="text-3xl font-bold text-center text-gray-600 my-4 pb-3">Iniciar Sesión</h4>
+        <div class="flex flex-row">
+          <mat-form-field floatLabel="never" appearance="outline" class="w-20 mr-5 text-sm">
+            <mat-label>DNI</mat-label>
+            <mat-select formControlName="selecDocument" [(value)]="selected" placeholder="DNI">
+              <mat-option value="8">DNI</mat-option>
+              <mat-option value="9">CE</mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.dirty"></mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-64 text-sm">
+            <mat-label>Ingreso del número de documento</mat-label>
+            <input #document (keypress)="onKeyPress($event)" maxlength={{selected}} type="text"
+                   formControlName="documentNumber" matInput placeholder="Ingreso del número de documento">
+            <mat-error *ngIf="form.dirty"></mat-error>
+          </mat-form-field>
+        </div>
+        <p class="text-left text-sm flex items-center">
+          <mat-icon class="text-yellow-500 mr-3 my-2">info</mat-icon>Clave de internet de 6 digitos
+        </p>
+        <app-password-field></app-password-field>
+        <mat-checkbox class="text-gray-100 text-sm" color="primary">Recordar datos</mat-checkbox>
+        <a class="text-center text-primary text-sm leading-5 underline my-5" routerLink="/signup">Recupera tu
+          contraseña aquí</a>
+
+          <div class="btn-float">
+            <button (click)="ObtainLoginHB('01',document.value); openSnackBar()" class="btn h-14" mat-raised-button color="primary">INGRESAR</button>
+            <button routerLink="/create-account" class="btn h-14" mat-raised-button>CREAR CLAVE</button>
+          </div>
+      </div>
+    </div>
+        <a href="https://www.cajametropolitana.com.pe/principal" class="flex items-center text-sm mt-6 ml-5 pt-5 pb-2">
+      <mat-icon class="text-yellow-500 mr-3">help</mat-icon><span class="underline text-primary">Necesitas
+                ayuda</span>
+    </a>
+  </div>
+</div>

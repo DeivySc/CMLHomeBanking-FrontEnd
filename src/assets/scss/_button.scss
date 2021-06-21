@@ -1,0 +1,122 @@
+button:focus {
+    outline: 0;
+  }
+  
+  .btn {
+    @apply inline-flex items-center font-bold border cursor-pointer py-1 px-3;
+    border-radius: 20px !important;
+    transition: all 0.3s;
+    margin-bottom: 10px !important;
+  
+    img {
+      height: 14px;
+      margin-right: .5rem;
+    }
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white border-primary;
+  
+    // &:hover {
+    //   @apply bg-secondary;
+    // }
+  }
+  
+  .btn-outline {
+  
+    &.btn-primary {
+      @apply bg-transparent text-primary;
+  
+    //   &:hover {
+    //     @apply bg-primary-200;
+    //   }
+    }
+  }
+  
+  .btn-link {
+  
+    &.btn-primary {
+      @apply bg-transparent text-primary border-transparent;
+  
+    //   &:hover {
+    //     @apply bg-primary-200;
+    //   }
+    }
+  }
+  
+//   .mat-button,
+//   .mat-flat-button,
+//   .mat-stroked-button,
+//   .mat-raised-button {
+//     @apply font-brand;
+//   }
+  
+  .mat-button.mat-primary,
+  .mat-icon-button.mat-primary,
+  .mat-stroked-button.mat-primary {
+    @apply text-primary;
+  }
+  
+//   .mat-button.mat-accent,
+//   .mat-icon-button.mat-accent,
+//   .mat-stroked-button.mat-accent {
+//     @apply text-secondary;
+//   }
+  
+  .mat-button.mat-primary .mat-button-focus-overlay,
+  .mat-icon-button.mat-primary .mat-button-focus-overlay,
+  .mat-stroked-button.mat-primary .mat-button-focus-overlay {
+    @apply bg-primary;
+  }
+  
+  .mat-stroked-button.mat-primary {
+    @apply border-primary;
+  }
+  
+//   .mat-stroked-button.mat-accent {
+//     @apply border-secondary;
+//   }
+  
+//   .mat-raised-button.mat-accent,
+//   .mat-flat-button.mat-accent {
+//     @apply bg-secondary text-white;
+//   }
+  
+  .mat-flat-button,
+  .mat-raised-button {
+    @apply bg-white text-primary;
+  }
+  
+  .mat-flat-button.mat-primary,
+  .mat-raised-button.mat-primary,
+  .mat-fab.mat-primary,
+  .mat-mini-fab.mat-primary {
+    @apply bg-primary text-white;
+  }
+  
+  //
+//   .mat-button,
+//   .mat-stroked-button,
+//   .mat-raised-button,
+//   .mat-flat-button {
+//     font-size: 16px!important;
+//     padding: 0 26px!important;
+//     line-height: 54px!important;
+//     border-radius: 9999px!important;
+  
+//     &:not(.sidenav-item) {
+//       font-weight: 700!important;
+//     }
+//   }
+  
+  // .mat-raised-button:not([class*=mat-elevation-z]) {
+  //   box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4);
+  // }
+  
+  // Buttons
+  .mat-button-base {
+    &.primary-light {
+      color: #030076!important;
+      background-color: #FFFFFF!important;
+    }
+  }

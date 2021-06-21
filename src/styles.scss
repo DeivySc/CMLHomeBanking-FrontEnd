@@ -1,0 +1,155 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// @use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+// @include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $cml-project-primary: mat.define-palette(mat.$indigo-palette);
+// $cml-project-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+// $cml-project-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+// $cml-project-theme: mat.define-light-theme((
+//   color: (
+//     primary: $cml-project-primary,
+//     accent: $cml-project-accent,
+//     warn: $cml-project-warn,
+//   )
+// ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($cml-project-theme);
+
+/* You can add global styles to this file, and also import other style files */
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import './assets/scss/_checkbox.scss';
+@import './assets/scss/_button.scss';
+@import './assets/scss/_steppers.scss';
+@import './assets/scss/_radio-button.scss';
+
+// html, body {  }
+body { margin: 0; font-family: 'Montserrat', sans-serif }
+
+.container-one-side-full {
+  width: 100%;
+
+  @screen sm {
+    max-width: calc((100% - 640px) / 2 + 640px);
+  }
+
+  @screen md {
+    max-width: calc((100% - 768px) / 2 + 768px);
+  }
+
+  @screen lg {
+    max-width: calc((100% - 1023px) / 2 + 1023px);
+  }
+
+  @screen xl {
+    max-width: calc((100% - 1280px) / 2 + 1280px);
+  }
+
+  @screen 2xl {
+    max-width: calc((100% - 1536px) / 2 + 1536px);
+  }
+}
+
+.centered-content-layout {
+  @apply flex flex-col min-h-screen;
+
+}
+
+.absolute-bg {
+  @apply absolute top-0 bottom-0 left-0 object-cover object-center h-full;
+  width: calc(50%);
+  right: calc(50% - 4rem);
+}
+
+.border-top {
+  height: 12px;
+  width: 100%;
+  background: linear-gradient(to right, #030076 50%, #00AF91 30%, #00AF91 80%, #F9B208 50%, #F9B208 120% );
+}
+
+.circulo {
+  border: 1px solid #C4C4C4;
+  background: #C4C4C4;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-inline: 6px;
+  margin-block: 3px;
+
+  &.select {
+    background: #1A3184;
+  }
+}
+
+.container-input {
+  border: 1px solid #7B7B7B;
+  padding-block: 15px;
+  padding-inline: 8px;
+  border-radius: 5px;
+}
+
+.mat-horizontal-content-container {
+  padding: 0px 11px 14px 11px!important;
+}
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+  padding: 24px 20px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #7B7B7B;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 1px !important;
+}
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
+  padding: 8px 0 0 0 !important;
+}
+
+.mat-checkbox-inner-container {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+@media (min-width: 1024px) {
+  .border-top {
+    width: 50%;
+    margin-left: auto;
+  }
+
+  .dimension {
+    max-width: 50%;
+  }
+
+  // .mat-horizontal-content-container {
+  //   padding: 0px 24px 24px 24px!important;
+  // }
+
+  .mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+    padding: 24px 24px;
+  }
+}

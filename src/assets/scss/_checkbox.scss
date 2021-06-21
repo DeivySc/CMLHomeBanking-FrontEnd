@@ -1,0 +1,20 @@
+// .mat-checkbox-frame {
+//     border-width: 1px!important;
+//     border-radius: 4px!important;
+//     border-color: #202945;
+//   }
+  
+//   .mat-checkbox-layout .mat-checkbox-label {
+//     @apply leading-tight;
+//   }
+
+.mat-checkbox-checked.mat-primary .mat-checkbox-background,
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-primary .mat-ripple-element,
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+  @apply bg-primary;
+}
+
+// ::ng-deep .mat-checkbox-indeterminate.mat-primary .mat-checkbox-background, .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+//   @apply bg-primary;
+
+// }

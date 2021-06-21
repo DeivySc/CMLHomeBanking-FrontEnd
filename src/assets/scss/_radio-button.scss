@@ -1,0 +1,4 @@
+.mat-radio-button.mat-primary .mat-radio-inner-circle,
+.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple {
+  @apply bg-primary;
+}
