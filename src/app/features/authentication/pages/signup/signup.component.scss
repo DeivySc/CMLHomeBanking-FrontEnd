@@ -1,3 +1,7 @@
+.container-form {
+  min-width: 105px;
+}
+
 ::ng-deep.mat-step-header .mat-step-icon {
   background-color: #0A29CA;
   opacity: 30%;
@@ -12,55 +16,60 @@
   color: #0A29CA !important;
   opacity: 100% !important;
 }
+
 ::ng-deep.mat-step-header .mat-step-label.mat-step-label {
   color: #0A29CA !important;
   opacity: 30%;
 }
 
-.btn-code{
+.btn-float {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  width: 88%;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.btn-code {
   height: 50px;
   position: relative;
-  bottom: 50%;
-  left: 60%;
-
-  // position: absolute;
-  // bottom: 50%;
-  // left: 60%;
+  bottom: 79%;
+  left: 67%;
   background: #E8E8FF;
 }
 
-.btn-code2{
+.btn-code2 {
   height: 50px;
   position: relative;
   bottom: 50px;
-  left: 230px;
-  // position: absolute;
-  // bottom: 37.17%;
-  // left: 60%;
+  left: 67%;
   background: #E8E8FF;
 }
 
 @media (min-width: 1024px) {
-  .btn-code{
+  .container-form {
+    max-width: 355px;
+  }
+
+  .btn-float {
+    width: 100%;
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+  }
+
+  .btn-code {
     position: relative;
     bottom: 50px;
     left: 60%;
-    // margin-right: 10px;
-
-    // position: absolute;
-    // bottom: 45%;
-    // left: 82%;
     background: #E8E8FF;
   }
 
-  .btn-code2{
-    // margin-right: 10px;
+  .btn-code2 {
     position: relative;
     bottom: 50px;
     left: 60%;
-    // position: absolute;
-    // bottom: 37.17%;
-    // left: 82%;
     background: #E8E8FF;
   }
 }

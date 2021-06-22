@@ -16,11 +16,11 @@ import { ILoginResponse } from '../../models/response/login-response.interface';
 @Injectable()
 export class AuthenticationService {
   constructor(private http: HttpClient) {}
-  
+
 
   public getLoginHB(req: IAuthenticationRequest, collection: string): Observable<IAuthenticationResponse[]> {
-    const url =
-      environment.ENDPOINTS.API_URL +
+    const url = 'http://localhost:25870/v1' +
+      // environment.ENDPOINTS.API_URL +
       collection;
 
     const httpOptions = {
@@ -40,8 +40,8 @@ export class AuthenticationService {
   }
 
   public getKeyboardHB(req: IKeyboardRequest, collection: string): Observable<IKeyboardResponse> {
-    const url =
-      environment.ENDPOINTS.API_URL +
+    const url = 'http://localhost:25870/v1' +
+      // environment.ENDPOINTS.API_URL +
       collection;
 
     const httpOptions = {
@@ -61,10 +61,10 @@ export class AuthenticationService {
   }
 
   public getValidateLoginHB(req: ISignupRequest, collection: string): Observable<ISignupResponse> {
-    
+
     const jsonrequest = JSON.stringify(req);
-    const url =
-      environment.ENDPOINTS.API_URL +
+    const url = 'http://localhost:25870/v1' +
+      // environment.ENDPOINTS.API_URL +
       collection;
 
     const httpOptions = {
@@ -85,10 +85,10 @@ export class AuthenticationService {
 
 
   public getObtainLoginHB(req:ILoginRequest , collection: string): Observable<ILoginResponse> {
-    
+
     const jsonrequest = JSON.stringify(req);
-    const url =
-      environment.ENDPOINTS.API_URL +
+    const url = 'http://localhost:25870/v1' +
+      // environment.ENDPOINTS.API_URL +
       collection;
 
     const httpOptions = {
