@@ -50,8 +50,6 @@
             <div style="display: flex; flex-direction: column;" [formGroup]="secondFormGroup">
               <ng-template matStepLabel>Código</ng-template>
               <h4 class="text-3xl font-bold text-center text-gray-600 my-4 pb-3">Ingresa el código</h4>
-              <p class="text-gray-100	text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint.</p>
               <p class="text-center text-sm flex items-center mx-auto">
                 <mat-icon class="text-yellow-500 mr-2 my-2">info</mat-icon>Seleccionar el canal donde
                 recibirás tu código
@@ -87,48 +85,6 @@
               </div>
             </div>
           </mat-step>
-
-<!--          <mat-step [editable]="isEditable" [stepControl]="secondFormGroup">-->
-<!--            <div style="display: flex; flex-direction: column;" [formGroup]="secondFormGroup">-->
-<!--              <ng-template matStepLabel>Código</ng-template>-->
-<!--              <h4 class="text-3xl font-bold text-center text-gray-600 my-4 pb-3">Ingresa el código</h4>-->
-<!--              <span class="text-gray-100	text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span>-->
-<!--              <p class="text-center text-sm flex items-center mx-auto">-->
-<!--                <mat-icon class="text-yellow-500 mr-2 my-2">info</mat-icon>Seleccionar el canal donde-->
-<!--                recibirás tu código-->
-<!--              </p>-->
-<!--              <div class="mb-2 mt-4 h-16">-->
-<!--                <mat-card style="border-radius: 20px; height: 50px; padding: 12px !important;">-->
-<!--                  <mat-radio-button checked="true" class="text-sm" value="1" color="primary">+51 ********058-->
-<!--                  </mat-radio-button>-->
-<!--                </mat-card>-->
-<!--                <button class="btn w-28 lg:w-36 btn-code" mat-raised-button>enviar SMS</button>-->
-<!--              </div>-->
-<!--              <div class="mb-8 h-16">-->
-<!--                <mat-card style="border-radius: 20px; height: 50px; padding: 12px !important;">-->
-<!--                  <mat-radio-button class="text-sm" value="2" color="primary">jos**********@gmail.com-->
-<!--                  </mat-radio-button>-->
-<!--                </mat-card>-->
-<!--                <button class="btn w-28 lg:w-36 btn-code2" mat-raised-button>enviar MAIL</button>-->
-<!--              </div>-->
-<!--              <mat-form-field appearance="outline" class="w-64 text-sm mx-auto">-->
-<!--                <mat-label>Ingresa tu código</mat-label>-->
-<!--                <input formControlName="codeNumber" matInput placeholder="Ingresa tu código">-->
-<!--              </mat-form-field>-->
-<!--              <a class="text-sm text-primary text-center cursor-pointer">Solicitar nuevo código</a>-->
-<!--              <div class="btn-float flex flex-row mt-14">-->
-<!--                &lt;!&ndash; agregar snack bar &ndash;&gt;-->
-<!--                <div class="mr-5 w-full">-->
-<!--                  <button (mouseover)="back()" class="btn h-14 w-full" mat-raised-button color="primary"-->
-<!--                          matStepperPrevious>VOLVER</button>-->
-<!--                </div>-->
-<!--                <div class="w-full">-->
-<!--                  <button class="btn h-14 w-full" mat-raised-button color="primary" matStepperNext>SIGUIENTE</button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </mat-step>-->
-
           <mat-step [stepControl]="thirdFormGroup">
             <div style="display: flex; flex-direction: column; padding-bottom: 30%">
               <ng-template matStepLabel>Clave de internet</ng-template>
